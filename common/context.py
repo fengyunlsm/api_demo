@@ -11,18 +11,20 @@ import re
 # d 是替换的内容
 # 找到目标字符串里面的标识符KEY，去d里面拿到替换的值
 # 替换到s 里面去，然后再返回
-from common.config import ReadConfig
+# from common.config import ReadConfig
 
-config = ReadConfig()
+# config = ReadConfig()
 
 
 class Context:  # 上下文，数据的准备和记录
-    admin_user = config.get('data', 'admin_user')
-    admin_pwd = config.get('data', 'admin_pwd')
-    loan_member_id = config.get('data', 'loan_member_id')
-    normal_user = config.get('data', 'normal_user')
-    normal_pwd = config.get('data', 'normal_pwd')
-    normal_member_id = config.get('data', 'normal_member_id')
+    # admin_user = config.get('data', 'admin_user')
+    # admin_pwd = config.get('data', 'admin_pwd')
+    # loan_member_id = config.get('data', 'loan_member_id')
+    # normal_user = config.get('data', 'normal_user')
+    # normal_pwd = config.get('data', 'normal_pwd')
+    # normal_member_id = config.get('data', 'normal_member_id')
+    admin_user = "root"
+    admin_pwd = "123456"
 
 
 def replace(s, d):
@@ -38,20 +40,21 @@ def replace(s, d):
 def replace_new(s):
     p="\$\{(.*?)}"
     while re.search(p, s):
-        m = re.search(p, s)
-        key = m.group(1)
+        m = re.search(p, s) # 扫描整个字符串，并返回第一个成功的匹配
+        key = m.group(1)  # 返回一个包含所有小组字符串的元组，从 1 到 所含的小组号。
         if hasattr(Context, key):
-            value = getattr(Context, key)  # 利用反射动态的获取属性
-            s = re.sub(p, value, s, count=1)
+            # 判断对象是否有该属性
+            value = getattr(Context, key)  # 利用反射动态的获取属性值
+            s = re.sub(p, value, s, count=1)  # 用于替换
         else:
             return None  # 或者抛出一个异常，告知没有这个属性
     return s
 
 # s = '{"mobilephone":"${admin_user}","pwd":"${admin_pwd}"}'
-# # data = {"admin_user": "15873171553", "admin_pwd": "123456"}
-# #
-# # s = replace(s, data)
-# # print(s)
+# data = {"admin_user": "15873171553", "admin_pwd": "123456"}
 #
+# s = replace(s, data)
+# print(s)
+
 # s = replace_new(s)
 # print(s)

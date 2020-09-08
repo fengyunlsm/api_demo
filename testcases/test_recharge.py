@@ -7,7 +7,7 @@
 """
 import unittest
 
-from libext.ddt import ddt, data
+from libext.ddtnew import ddt, data
 
 from common import contants
 from common.do_excel import DoExcel

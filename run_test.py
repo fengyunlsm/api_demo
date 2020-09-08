@@ -10,17 +10,18 @@ import unittest
 from libext import HTMLTestRunnerNew
 
 from common import contants
-# from testcases.test_login import TestLogin
+# from testcases.test_login import LoginTest
 # from testcases import test_register
 # suite = unittest.TestSuite()  # 测试用例集合
 # loader = unittest.TestLoader()  # 加载用例
-# suite.addTest(loader.loadTestsFromTestCase(TestLogin))
+# suite.addTest(loader.loadTestsFromTestCase(LoginTest))
 # suite.addTest(loader.loadTestsFromModule(test_register))
 
 # 自动查找testcases目录下，以test开头的.py文件里面的测试类
-discover = unittest.defaultTestLoader.discover(contants.testcases_dir, pattern="test_*.py", top_level_dir=None)
+discover = unittest.defaultTestLoader.discover(contants.testcases_dir, pattern="test_invest.py", top_level_dir=None)
 #
 with open(contants.reports_html, 'wb+') as file:
+    print (discover)
     # 执行用例
     runner = HTMLTestRunnerNew.HTMLTestRunner(stream=file,
                                               title='API',
