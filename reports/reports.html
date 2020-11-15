@@ -116,19 +116,19 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">API</h1>
 <p class='attribute'><strong>测试人员 : </strong> Mongo</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-11-10 18:31:54</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:03.033173</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 12，通过 11，失败 1，通过率= 91.67%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-11-15 23:16:01</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:01.194068</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 4，通过 4，通过率= 100.00%</p>
 
 <p class='description'>API测试报告</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 91.67% }</a>
-<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 11 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 12 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 4 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 4 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,271 +148,42 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='failClass warning'>
-    <td>test_order.OrderTest</td>
-    <td class="text-center">12</td>
-    <td class="text-center">11</td>
-    <td class="text-center">1</td>
+<tr class='passClass warning'>
+    <td>test_login.LoginTest</td>
+    <td class="text-center">4</td>
+    <td class="text-center">4</td>
     <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',12)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',4)" class="detail" id='c1'>详细</a></td>
 </tr>
 
 <tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_01_ 登录: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse in" align="left">
-    <pre>
-    
-pt1_1: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
+    <td class='passCase'><div class='testcase'>test_login_1_正常登录: 测试用例封装类</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_02_搜索商品: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in" align="left">
-    <pre>
-    
-pt1_2: 这是一个setUP
------&gt; 0 16
------&gt; 0 16
-
-
-    </pre>
-    </div>
-    </td>
+    <td class='passCase'><div class='testcase'>test_login_2_输入错误的密码: 测试用例封装类</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_03_加入购物车: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse in" align="left">
-    <pre>
-    
-pt1_3: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
+    <td class='passCase'><div class='testcase'>test_login_3_不输入密码: 测试用例封装类</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='pt1_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_04_查看购物车: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
-    <div id='div_pt1_4' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
-    <div id='div_pt1_4' class="collapse in" align="left">
-    <pre>
-    
-pt1_4: 这是一个setUP
------&gt; 0 1
------&gt; 0 5
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_05_结算: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
-    <div id='div_pt1_5' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
-    <div id='div_pt1_5' class="collapse in" align="left">
-    <pre>
-    
-pt1_5: 这是一个setUP
------&gt; 0 1
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_06_获取优惠券: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
-    <div id='div_pt1_6' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
-    <div id='div_pt1_6' class="collapse in" align="left">
-    <pre>
-    
-pt1_6: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_07_计算优惠: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
-    <div id='div_pt1_7' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
-    <div id='div_pt1_7' class="collapse in" align="left">
-    <pre>
-    
-pt1_7: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_08_搜索商品: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
-    <div id='div_pt1_8' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
-    <div id='div_pt1_8' class="collapse in" align="left">
-    <pre>
-    
-pt1_8: 这是一个setUP
------&gt; 0 16
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='ft1_9' class='none'>
-    <td class='failCase'><div class='testcase'>test_order_09_立即购买: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_9'>失败</button>
-    <div id='div_ft1_9' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_9'>失败</button>
-    <div id='div_ft1_9' class="collapse in" align="left">
-    <pre>
-    
-ft1_9: 这是一个setUP
-Traceback (most recent call last):
-  File "E:\python13-api-test\libext\ddtnew.py", line 153, in wrapper
-    return func(self, *args, **kwargs)
-  File "E:\python13-api-test\testcases\test_order.py", line 65, in test_order
-    raise e
-  File "E:\python13-api-test\testcases\test_order.py", line 59, in test_order
-    self.assertEqual(expected_result, actual_result, "order error ")
-AssertionError: Lists differ: [200] != [9999]
-
-First differing element 0:
-200
-9999
-
-- [200]
-+ [9999] : order error 
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_10' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_10_结算: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
-    <div id='div_pt1_10' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
-    <div id='div_pt1_10' class="collapse in" align="left">
-    <pre>
-    
-pt1_10: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_11' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_11_获取优惠券: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
-    <div id='div_pt1_11' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_11' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_11'>通过</button>
-    <div id='div_pt1_11' class="collapse in" align="left">
-    <pre>
-    
-pt1_11: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_12' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_order_12_计算优惠: 测试用例封装类</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
-    <div id='div_pt1_12' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_12' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_12'>通过</button>
-    <div id='div_pt1_12' class="collapse in" align="left">
-    <pre>
-    
-pt1_12: 这是一个setUP
-
-
-    </pre>
-    </div>
-    </td>
+    <td class='passCase'><div class='testcase'>test_login_4_不输入手机号码: 测试用例封装类</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>12</td>
-    <td>11</td>
-    <td>1</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
-    <td>通过率：91.67%</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
 </tr>
 </table>
 

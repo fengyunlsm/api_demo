@@ -26,5 +26,5 @@ with open(contants.reports_html, 'wb+') as file:
     runner = HTMLTestRunnerNew.HTMLTestRunner(stream=file,
                                               title='API',
                                               description='API测试报告',
-                                              tester='Mongo')
+                                              tester='lishaopming')
     runner.run(discover)  # 执行查找到的用例
