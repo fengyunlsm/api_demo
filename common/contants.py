@@ -25,4 +25,4 @@ logs_dir = os.path.join(base_dir, "logs")
 testcases_dir = os.path.join(base_dir, "testcases")
 
 reports_dir = os.path.join(base_dir, 'reports')  # reports文件夹路径
-reports_html = os.path.join(reports_dir, 'reports.html')  # reports文件夹路径
+reports_html = os.path.join(reports_dir, '//reports','.html')  # reports文件夹路径
