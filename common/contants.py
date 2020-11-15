@@ -5,7 +5,7 @@
 @email:3126972006@qq.com
 @function： 常量
 """
-import os
+import os, platform
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # 项目根路径
 # print(base_dir)
@@ -25,4 +25,10 @@ logs_dir = os.path.join(base_dir, "logs")
 testcases_dir = os.path.join(base_dir, "testcases")
 
 reports_dir = os.path.join(base_dir, 'reports')  # reports文件夹路径
-reports_html = os.path.join(reports_dir, '//reports.html')  # reports文件夹路径
+
+sysstr = platform.system()
+if (sysstr == "Windows"):
+    reports_html = os.path.join(reports_dir, 'reports.html')  # reports文件夹路径
+else:
+    reports_html = os.path.join(reports_dir, 'reports.html')
+    reports_html = reports_html.replace('\\', '/')
