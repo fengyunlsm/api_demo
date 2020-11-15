@@ -5,15 +5,17 @@
 @email:3126972006@qq.com
 @function： 
 """
-import re
+import re, os, sys
 
 # s 是目标字符串
 # d 是替换的内容
 # 找到目标字符串里面的标识符KEY，去d里面拿到替换的值
 # 替换到s 里面去，然后再返回
-# from common.config import ReadConfig
+base_path = os.getcwd()
+sys.path.append(base_path)
+from common.config import ReadConfig
 
-# config = ReadConfig()
+config = ReadConfig()
 
 
 class Context:  # 上下文，数据的准备和记录
@@ -25,6 +27,9 @@ class Context:  # 上下文，数据的准备和记录
     # normal_member_id = config.get('data', 'normal_member_id')
     admin_user = "root"
     admin_pwd = "123456"
+    mobile = config.get('data', 'mobile')
+    password = config.get('data', 'password')
+    search_keyword = config.get('data', 'search_keyword')
 
 
 def replace(s, d):
@@ -50,11 +55,11 @@ def replace_new(s):
             return None  # 或者抛出一个异常，告知没有这个属性
     return s
 
-# s = '{"mobilephone":"${admin_user}","pwd":"${admin_pwd}"}'
+#s = '["mobilephone":"${admin_user}","pwd":"${admin_pwd}"]'
 # data = {"admin_user": "15873171553", "admin_pwd": "123456"}
 #
 # s = replace(s, data)
 # print(s)
 
-# s = replace_new(s)
-# print(s)
+#s = replace_new(s)
+#print(s)

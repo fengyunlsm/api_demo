@@ -57,6 +57,9 @@ class DoExcel:
             case.data = sheet.cell(row=r, column=4).value  # 取第r行，第4格的值
             case.method = sheet.cell(row=r, column=5).value  # 取第r行，第5格的值
             case.expected = sheet.cell(row=r, column=6).value  # 取第r行，第6格的值
+            case.cookie = sheet.cell(row=r, column=10).value # 取第r行，第10格的值 拿到cookie的值
+            case.expected_data = sheet.cell(row=r, column=11).value  # 取第r行，第11格的值，拿到cookie的值
+            case.actual_data = sheet.cell(row=r, column=12).value  # 取第r行，第12格的值，拿到cookie的值
             if type(case.expected) == int:
                 case.expected = str(case.expected)
             cases.append(case)  # 将case放到cases 列表里面

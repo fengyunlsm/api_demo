@@ -5,28 +5,33 @@
 @email:3126972006@qq.com
 @function： 
 """
-from common import contants
-from common.do_excel import DoExcel
-from common.request import Request
 
-# 不用unittest的写法
+import requests
 
-# 请求不成功
-# url data text json
-# str dict  eval json
-# 接口自动化的流程 写用例--执行用例--报告
-do_excel = DoExcel(contants.case_file)  # 传入cases.xlsx
-cases = do_excel.get_cases('login')
-request = Request()  # 实例化对象
-for case in cases:
-    print("开始执行第{0}用例".format(case.id))
-    # 使用封装好的request 来完成请求
-    resp = request.request(case.method, case.url, case.data)
-    # 将返回结果和期望结果进行匹配
-    if resp.text == case.expected:
-        # 一致就写入Excel的结果为PASS，并且
-        do_excel.write_result(case.id + 1, resp.text, 'PASS')
-        print("第{0}用例执行结果：PASS".format(case.id))
-    else:
-        do_excel.write_result(case.id + 1, resp.text, 'FAIL')
-        print("第{0}用例执行结果：FAIL".format(case.id))
+url = "http://eshop.tslj.cn/issec/settlement/settlement/v1/neworder/campain"
+
+payload = "{\r\n    \"addressId\": \"25e7e7f5e28c433698fdb8f03373b0a6\",\r\n    \"remark\": \"\",\r\n    \"discountcodeList\": [],\r\n    \"couponList\": [],\r\n    \"operator\": \"\"\r\n}"
+headers = {
+  'Content-Type': 'application/json',
+  'Cookie': 'SESSION=c6143faf-8cde-4a4b-a167-05bea3e541a5'
+}
+
+response = requests.request("PATCH", url, headers=headers, data = payload)
+
+print(response.text.encode('utf8'))
+
+
+import pymysql
+db = pymysql.connect(host="", user="", password="", daatbase="", charset="utf-8")
+cursor = db.cursor()
+sql = ""
+try:
+  cursor.execute(sql)
+  # 提交事务
+  db.commit()
+except Exception as e:
+  db.rollback()
+# 关闭光标对象
+cursor.close()
+# 关闭数据库连接
+db.close()

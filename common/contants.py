@@ -21,7 +21,7 @@ test2_conf = os.path.join(conf_dir, "test2.conf")  # 测试配置文件路径
 global_conf = os.path.join(conf_dir, "global.conf")  # 测试配置文件路径
 
 logs_dir = os.path.join(base_dir, "logs")
-
+                                                                                            
 testcases_dir = os.path.join(base_dir, "testcases")
 
 reports_dir = os.path.join(base_dir, 'reports')  # reports文件夹路径

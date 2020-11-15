@@ -7,7 +7,11 @@
 """
 import logging
 import logging.handlers
-import os
+import os, sys
+# base_path = os.getcwd()
+# print (base_path)
+# sys.path.append(base_path)
+
 
 from common import contants
 from common.config import ReadConfig
@@ -26,6 +30,7 @@ def get_logger(logger_name):
     formate = logging.Formatter(fmt)
 
     file_name = os.path.join(contants.logs_dir, 'case.log')
+    print(file_name)
     file_handler = logging.handlers.RotatingFileHandler(file_name, maxBytes=20 * 1024 * 1024, backupCount=10, encoding="utf-8",mode="a")
     level = config.get('log', 'file_handler')
     file_handler.setLevel(level)
@@ -43,7 +48,7 @@ def get_logger(logger_name):
 
 
 if __name__ == '__main__':
-    logger = get_logger(logger_name='invest')
+    logger = get_logger(logger_name='case')
     logger.error('this is error ')
     logger.info('this is info ')
     logger.debug('this is debug ')
