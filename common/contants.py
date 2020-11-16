@@ -27,7 +27,7 @@ testcases_dir = os.path.join(base_dir, "testcases")
 reports_dir = os.path.join(base_dir, 'reports')  # reports文件夹路径
 
 sysstr = platform.system()
-if (sysstr == "Windows"):
+if ("Windows" in sysstr):
     reports_html = os.path.join(reports_dir, 'reports.html')  # reports文件夹路径
 else:
     reports_html = os.path.join(reports_dir, 'reports.html')

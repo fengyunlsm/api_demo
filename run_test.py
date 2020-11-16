@@ -15,7 +15,7 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.text import MIMEText
 
-import smtplib, os, time
+import smtplib, os, time, platform
 
 from common import contants
 config = ReadConfig()
@@ -31,7 +31,11 @@ config = ReadConfig()
 
 def new_report(testreport):
     lists = os.listdir(testreport)
-    lists.sort(key=lambda fn:os.path.getmtime(testreport+'\\'+fn)) #获取一个文件中的最近访问时间的文件
+    sysstr = platform.system()
+    if ("Windows" in sysstr):
+        lists.sort(key=lambda fn:os.path.getmtime(testreport+'\\'+fn)) #获取一个文件中的最近访问时间的文件
+    else:
+        lists.sort(key=lambda fn:os.path.getmtime(testreport+'/'+fn))
     file_new = os.path.join(testreport,lists[-1]) 
     print("==========获取最近时间生成的报告文件路径===========> " + file_new)
     return file_new
@@ -93,5 +97,4 @@ with open(contants.reports_html, 'wb+') as file:
 
 # 执行发送邮件
 report_a = new_report(contants.reports_dir)
-# print(report_a)
 send_mail(report_a, contants.reports_html)
