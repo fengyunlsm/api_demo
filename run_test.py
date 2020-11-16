@@ -31,11 +31,11 @@ config = ReadConfig()
 
 def new_report(testreport):
     lists = os.listdir(testreport)
-    sysstr = platform.system()
-    if ("Windows" in sysstr):
-        lists.sort(key=lambda fn:os.path.getmtime(testreport+'\\'+fn)) #获取一个文件中的最近访问时间的文件
-    else:
-        lists.sort(key=lambda fn:os.path.getmtime(testreport+'/'+fn))
+    # sysstr = platform.system()
+    # if ("Windows" in sysstr):
+    #     lists.sort(key=lambda fn:os.path.getmtime(testreport+'\\'+fn)) #获取一个文件中的最近访问时间的文件
+    # else:
+    lists.sort(key=lambda fn:os.path.getmtime(testreport+'/'+fn))
     file_new = os.path.join(testreport,lists[-1]) 
     print("==========获取最近时间生成的报告文件路径===========> " + file_new)
     return file_new
