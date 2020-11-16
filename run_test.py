@@ -91,7 +91,7 @@ with open(contants.reports_html, 'wb+') as file:
                                               tester='lishaoming')
     runner.run(discover)  # 执行查找到的用例
 
-    # 执行发送邮件
+# 执行发送邮件
 report_a = new_report(contants.reports_dir)
 # print(report_a)
 send_mail(report_a, contants.reports_html)

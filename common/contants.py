@@ -32,3 +32,6 @@ if (sysstr == "Windows"):
 else:
     reports_html = os.path.join(reports_dir, 'reports.html')
     reports_html = reports_html.replace('\\', '/')
+print(platform.platform())
+print(reports_html)
+
