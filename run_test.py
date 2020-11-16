@@ -73,15 +73,12 @@ def send_mail(new_report, filename):
         smtp = smtplib.SMTP()
         smtp.connect(config.get("email","mail_host"))
         smtp.login(sender, sendpwd)
-    # except:
-    #     smtp = smtplib.SMTP_SSL(config.get("email","mail_host"), config.get("email","port"))
-    #     smtp.login(sender, sendpwd)
+    except:
+        smtp = smtplib.SMTP_SSL(config.get("email","mail_host"), config.get("email","port"))
+        smtp.login(sender, sendpwd)
+    finally:
         smtp.sendmail(sender, receiver.split(","), msg.as_string())       
         print('mail has been send successfully')
-    
-        smtp.quit()
-    except Exception as e:
-        print(e)
         smtp.quit()
 
 discover = unittest.defaultTestLoader.discover(contants.testcases_dir, pattern="test_login.py", top_level_dir=None)
