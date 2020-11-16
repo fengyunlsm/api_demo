@@ -71,12 +71,15 @@ def send_mail(new_report, filename):
 
     try:
         smtp = smtplib.SMTP()
-        smtp.connect(config.get("email","mail_host"))
-        smtp.login(sender, sendpwd)
+        sysstr = platform.system()
+        if ("Windows" in sysstr):
+            smtp.connect(config.get("email","mail_host"))
+        else:
+            smtp = smtplib.SMTP_SSL(config.get("email","mail_host"), config.get("email","port"))
     except:
-        smtp = smtplib.SMTP_SSL(config.get("email","mail_host"), config.get("email","port"))
-        smtp.login(sender, sendpwd)
+        print (e)
     finally:
+        smtp.login(sender, sendpwd)
         smtp.sendmail(sender, receiver.split(","), msg.as_string())       
         print('mail has been send successfully')
         smtp.quit()
